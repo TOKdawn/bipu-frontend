@@ -19,17 +19,17 @@ const router = new VueRouter({
 })
 router.beforeEach((to, from, next) => {
         if (to.meta.requireAuth) {
-            if (store.state.userdata.role === 0) {
-                console.log(store.state.userdata.role)
+            if (store.state.userData.role === 0) {
+                console.log(store.state.userData.role)
                 console.log('验证失败')
                 next({
-                    path: '/basic/loginbasic/login',
+                    path: '/basic/home',
                     query: {
                         redirect: to.fullPath
                     }
                 })
             } else {
-                console.log(store.state.userdata.role)
+                console.log(store.state.userData.role)
                 console.log('验证成功')
                 next()
             }

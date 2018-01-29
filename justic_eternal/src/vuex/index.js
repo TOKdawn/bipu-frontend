@@ -3,23 +3,22 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
     /* eslint-disable no-new */
 const state = {
-    userdata: {
-        '_id': {
-            '$oid': ''
-        },
-        'email': '',
-        'passwordHash': '',
+    userData: {
+        'id': '',
         'role': 0,
-        'username': ''
+        'name': '',
+        'img': ''
     }
 }
 const mutations = {
-    login(state, userData) {
-        state.userdata.role = userData.role
-        state.userdata.username = userData.name
+    updata(state, userData) {
+        state.userData.role = userData.role
+        state.userData.uName = userData.name
+        state.userData.id = userData.id
+        state.userData.img = userData.img
     },
     logout(state) {
-        state.userdata.role = 0
+        state.userData.role = 0
     }
 }
 export default new Vuex.Store({
