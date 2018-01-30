@@ -1,8 +1,6 @@
 <template>
     <div class="header1">
-        <a href="https://github.com/zytx121/je" target="_blank">
-        <Icon class="github"  type="social-github" color="white" size="30" ></Icon>
-        </a>
+        <img class="logo" @click="$_router" src="@/assets/logo.png" >
         <div class="bipu" @click="$_router">bipubipu</div>
         <div class="user">
             <Avatar icon="person" class="avatar" src="//avatars2.githubusercontent.com/u/15122564?s=460&v=4"/>
@@ -41,12 +39,17 @@ export default {
   transform: translateY(-50%);
 }
 
-.github {
+.logo{
+  height: 40px;
   margin-left: 40px;
   float:left;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.logo:hover{
+  height: 39px;
 }
 
 .user{
