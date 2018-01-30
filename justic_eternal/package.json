@@ -14,15 +14,10 @@
         "vue": "^2.5.2",
         "vue-router": "^3.0.1",
         "css-loader": "^0.28.7",
-
-
         "iview": "^2.6.0",
-
         "node-sass": "^4.0.0",
         "sass-loader": "^6.0.6",
         "style-loader": "0.19.0",
-
-
         "vuex": "^3.0.0"
     },
     "devDependencies": {

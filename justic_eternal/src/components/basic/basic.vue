@@ -1,72 +1,60 @@
 <template>
   
- 
-
-   <Layout class="container">
-        <div class="header1">
-          <Icon class="github"  type="social-github" color="white" size="30" ></Icon>
-              <div @click="$_router(0)">bipupu</div>
-        </div>
-        <Header class="header2">
+  <Layout class="container">
+        <div class="header">
+        <v-header></v-header>
+        <Header class="subHeader">
           <Menu mode="horizontal"  active-name="1">
-          <MenuItem name="1" >
+          <MenuItem name="1" @click.native="$_router(1)">
               <Icon type="search"></Icon>
-                   <div @click="$_router(1)">搜索</div>
+              搜索
           </MenuItem>
-          <MenuItem name="2" >
+          <MenuItem name="2" @click.native="$_router(2)">
               <Icon type="shuffle"></Icon>
-             
-              <div @click="$_router(2)">转谱器</div>
+              转谱器
           </MenuItem>
-          <Submenu name="3">
-              <template slot="title" @click="$_router(3)">
-                  <Icon type="ios-bookmarks"></Icon>
-                  谱册
-              </template>
-                <MenuItem name="3-1">
-                <Icon type="ios-flame-outline"></Icon>
-                热门
-                </MenuItem>
-                <MenuItem name="3-2">
-                <Icon type="ios-clock-outline"></Icon>
-                最新
-                </MenuItem>
-          </Submenu>
-          <MenuItem name="4" @click="$_router(4)">
+          <MenuItem name="3" @click.native="$_router(3)">
+              <Icon type="ios-bookmarks"></Icon>
+              谱册
+          </MenuItem>
+          <MenuItem name="4" @click.native="$_router(4)">
               <Icon type="ios-musical-notes"></Icon>
               佳作
           </MenuItem>
-          <MenuItem name="5">
-              <Icon type="android-arrow-down" @click="$_router(5)"></Icon>
+          <MenuItem name="5" @click.native="$_router(5)">
+              <Icon type="android-arrow-down" ></Icon>
               APP下载
           </MenuItem>
-          <MenuItem name="6" @click="$_router(6)">
+          <MenuItem name="6" @click.native="$_router(6)">
               <Icon type="information"></Icon>
               使用说明
           </MenuItem>
           </Menu>
         </Header>
+        </div>
         <Content class="main">
                <router-view></router-view>
         </Content>
+
         <Footer class="footer">
         <h1 class="footertitle">哔谱哔谱</h1>
         <h2 class="footerinfo1">Copyright © 2018 哔谱哔谱 bipubipu.com | ICP备XXX号</h2>
         <h2 class="footerinfo2"> 2018 Made with <Icon type="heart"></Icon> by Justice_Eternal</h2>
         </Footer>
-    </Layout>
+  </Layout>
 </template>
 <script>
+import vHeader from '@/components/login/LoginHeader.vue'
 export default {
   data() {
     return {};
   },
+  components: {
+    vHeader,
+  },
   methods: {
     $_router: function(routerGo) {
       switch (routerGo) {
-        case 0:
-          this.$router.push("/basic/home");
-          break;
         case 1:
         let id= '0000000001'
          this.$router.push({ name: "score", params: { scoreId: id} });
@@ -99,22 +87,15 @@ export default {
   justify-content: center;
 }
 
-.header1 {
-  height: 40px;
-  background-color: #666;
-  margin-left: 1px;
-  color: white;
-  font-size: 18px;
+.header {
+  height: 100px;
 }
 
-.github {
-  margin-left: 40px;
-}
-
-.header2 {
+.subHeader {
   height: 60px;
   background-color: #fff;
   flex-direction: column;
+  width: 100%;
 }
 
 .main {

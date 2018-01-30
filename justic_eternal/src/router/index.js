@@ -14,7 +14,7 @@ export default [{
                 component: r => require.ensure([], () => r(require('../components/basic/home/home.vue')), 'home'),
 
             }, {
-                path: '/basicscore/:scoreId',
+                path: '/basic/score/:scoreId',
                 name: 'score',
                 component: r => require.ensure([], () => r(require('../components/basic/score/score.vue')), 'score')
             }, {
