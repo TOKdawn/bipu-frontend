@@ -14,7 +14,7 @@ export default [{
                 component: r => require.ensure([], () => r(require('../components/basic/home/home.vue')), 'home'),
 
             }, {
-                path: '/basicscore/:scoreId',
+                path: '/basic/score/:scoreId',
                 name: 'score',
                 component: r => require.ensure([], () => r(require('../components/basic/score/score.vue')), 'score')
             }, {
@@ -25,7 +25,7 @@ export default [{
                 },
                 component: r => require.ensure([], () => r(require('../components/basic/user/user.vue')), 'user')
             }, {
-                path: '/basic/volume/:volumeId',
+                path: '/basic/volumes',
                 name: 'volume',
                 component: r => require.ensure([], () => r(require('../components/basic/volumes/volumes.vue')), 'volume')
             }, {

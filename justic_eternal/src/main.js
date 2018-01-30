@@ -6,6 +6,7 @@ import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import iView from 'iview'
 import axios from 'axios'
+import '../my-theme/index.less';
 import 'iview/dist/styles/iview.css'
 import store from './vuex/'
 Vue.config.productionTip = false
