@@ -34,19 +34,24 @@
       <div class="nav-right">
         <div class="user">
           <Avatar icon="person" class="avatar" src="//avatars2.githubusercontent.com/u/15122564?s=460&v=4"/>
-          <Icon type="more"  size="20" class="more"></Icon>
+          <Icon type="more"  size="30" class="more"></Icon>
         </div>
       </div>
 
     </div>
-          <Input class="search" size="large"  placeholder="说你又想要什么奇怪的谱子 - -！"  >
-              <Button slot="append" icon="ios-search" size="nomal"></Button>
-          </Input>
+<!--           <Input class="search" v-model="keyword" placeholder="说你又想要什么奇怪的谱子 - -！" type="search" @keyup.enter="searchIssues()" >
+              <Button slot="append" icon="ios-search" @click="searchIssues()"></Button>
+          </Input> -->
   </div>
 </template>
 
 <script>
 export default {
+    data () {
+      return {
+        keyword: ''
+      }
+    },
     computed: {
 
     },
@@ -92,7 +97,7 @@ export default {
 
 
 .header1 {
-  height: 40px;
+  height: 60px;
   background-color: hsla(0,0%,95%,.8); 
 }
 
@@ -136,14 +141,14 @@ export default {
 
 .more{
   float: right;
-  margin-left: 10px;
+  margin-left: 20px;
   position: relative;
   top: 50%;
-  transform: translateY(-70%);  
+  transform: translateY(-60%);  
 }
 
 .avatar{
-   
+
 }
 
 .search{

@@ -11,7 +11,7 @@ export default [{
         // },
         children: [{
                 path: '/basic/home',
-                component: r => require.ensure([], () => r(require('../components/basic/home/home.vue')), 'home'),
+                component: r => require.ensure([], () => r(require('../components/basic/home/home.vue')), 'home')
 
             }, {
                 path: '/basic/score/:scoreId',
@@ -26,33 +26,35 @@ export default [{
                 component: r => require.ensure([], () => r(require('../components/basic/user/user.vue')), 'user')
             }, {
                 path: '/basic/volumes',
+                name: 'volumes',
+                component: r => require.ensure([], () => r(require('../components/basic/volumes/volumes.vue')), 'volumes')
+            }, {
+                path: '/basic/volume/:volumeId',
                 name: 'volume',
-                component: r => require.ensure([], () => r(require('../components/basic/volumes/volumes.vue')), 'volume')
+                component: r => require.ensure([], () => r(require('../components/basic/volumes/volume.vue')), 'volume')
             }, {
                 path: '/basic/download',
                 name: 'download',
-                component: r => require.ensure([], () => r(require('../components/basic/download/download.vue')), 'download'),
+                component: r => require.ensure([], () => r(require('../components/basic/download/download.vue')), 'download')
             }, {
-                path: '/basic/edit',
+                path: '/basic/edit/:volumeId',
                 name: 'edit',
                 meta: {
                     requireAuth: true
                 },
-                component: r => require.ensure([], () => r(require('../components/basic/edit/edit.vue')), 'edit'),
+                component: r => require.ensure([], () => r(require('../components/basic/edit/edit.vue')), 'edit')
             }, {
                 path: '/basic/instructions',
                 name: 'instructions',
-                component: r => require.ensure([], () => r(require('../components/basic/instructions/instructions.vue')), 'instructions'),
+                component: r => require.ensure([], () => r(require('../components/basic/instructions/instructions.vue')), 'instructions')
             }, {
                 path: '/basic/translator',
                 name: 'translator',
-                component: r => require.ensure([], () => r(require('../components/basic/translator/translator.vue')), 'translator'),
-            },
-
-            {
+                component: r => require.ensure([], () => r(require('../components/basic/translator/translator.vue')), 'translator')
+            }, {
                 path: '/basic/works',
                 name: 'works',
-                component: r => require.ensure([], () => r(require('../components/basic/works/works.vue')), 'works'),
+                component: r => require.ensure([], () => r(require('../components/basic/works/works.vue')), 'works')
             },
 
         ]
