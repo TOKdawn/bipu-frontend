@@ -28,6 +28,7 @@
 
 	   	<div class="newyear">
 	   		<h1 class="newyear-title">JE吧拜年祭</h1>
+	   		<img class="newyear-img" src="@/assets/bnj.jpg" >
 
 <!-- 	        <div class="gridlist-container">
 	            <Card class="gridlist" v-for="item in recommondList1" key="item.aid">
@@ -323,10 +324,16 @@ export default {
 
 .newyear{
 	margin: 80px 0;
+
 }
 
 .newyear-title{
 	text-align: center;
 	color: red;
+}
+
+.newyear-img{
+	margin-top: 20px;
+	margin-left: 80px;
 }
 </style>

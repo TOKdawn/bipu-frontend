@@ -1,11 +1,6 @@
 <template>
-  <div class="wrapper">
-
-
-                    <video controls="controls" :src="list.src" :poster="list.pic" class="video"></video>                 
-
-
-
+  <div class="wrapper1">
+    <video controls="controls" :src="list.src" :poster="list.pic" class="video"></video>                 
   </div>
 
 </template>
@@ -109,5 +104,15 @@ export default {
 
 <style scoped>
 
+.wrapper1{
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+
+.video{
+  width: 100%;
+}
 
 </style>
