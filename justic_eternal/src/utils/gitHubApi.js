@@ -19,8 +19,8 @@ module.exports = {
   getComments (vue, url) {
     return vue.$http.get(url)
   },
-  getReadme (vue) {
-    return vue.$http.get(`https://raw.githubusercontent.com/${vue.$store.getters.context}/master/README.md`)
+  getDownload (vue) {
+    return vue.$http.get(`https://raw.githubusercontent.com/zytx121/je/master/download.md`)
   },
   getInstruction (vue) {
     return vue.$http.get(`https://raw.githubusercontent.com/zytx121/je/master/README.md`)

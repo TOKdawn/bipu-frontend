@@ -8,6 +8,9 @@ const state = {
         'role': 0,
         'name': '',
         'img': ''
+    },
+    video: {
+        recommondList1: []
     }
 }
 const mutations = {

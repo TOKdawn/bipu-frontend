@@ -5,12 +5,13 @@ export default [{
     children: [{
         path: '',
         component: r => require.ensure([], () => r(require('../components/basic/basic.vue')), 'basic'),
-        redirect: '/basic/home',
+        redirect: '/basic/home/:keyword?',
         // meta: {
         //     requireAuth: true
         // },
         children: [{
-                path: '/basic/home',
+                path: '/basic/home/:keyword?',
+                name: 'home',
                 component: r => require.ensure([], () => r(require('../components/basic/home/home.vue')), 'home')
 
             }, {
@@ -55,6 +56,10 @@ export default [{
                 path: '/basic/works',
                 name: 'works',
                 component: r => require.ensure([], () => r(require('../components/basic/works/works.vue')), 'works')
+            }, {
+                path: '/basic/play/:videoId',
+                name: 'play',
+                component: r => require.ensure([], () => r(require('../components/basic/works/play.vue')), 'play')
             },
 
         ]

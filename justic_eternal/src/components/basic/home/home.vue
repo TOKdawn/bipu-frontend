@@ -7,14 +7,14 @@
           <Button slot="append" icon="ios-search" @click="searchIssues()" ></Button>
       </Input>
 
-      <div class="list-name">
+      <div class="list-name" v-if="totalNum">
         <span>谱曲名称</span>      
         <span class="list-name-r">上传者</span>
       </div>
 
 
 
-      <Card class="score-list" v-for="issue in issues" :key="issue.id">
+      <Card class="score-list" v-for="issue in issues" :key="issue.id" v-if="totalNum">
         <router-link :to="{name:'score', params: {scoreId: issue.number, issue: issue}}">
           <h2 class="list-font">{{issue.title.trim().substring(0, 25)}}</h2>
         </router-link>
@@ -49,8 +49,15 @@
         Fly Me to The Moon Fly Me to The Moon Fly Me to The 
         <Avatar icon="person" class="list-avatar" size="large" src="//avatars2.githubusercontent.com/u/15122564?s=460&v=4"/>
       </Card>  -->
+      <div class="slogan" v-if="!totalNum" >
 
-      <div class="pagination">
+        <a class="share2" href="https://github.com/zytx121/je/issues" target="_blank">
+          <img class="logo1" src="@/assets/logo.png" >
+        </a>
+        <h1>肥肠抱歉，您要找的谱子暂时还没入库 - -！</h1>
+      </div>
+
+      <div class="pagination" v-if="totalNum">
         <!-- <v-pagination></v-pagination> -->
             <Page :total="totalNum" :current="currentPage" :page-size="pageSize"  show-total placement="top" @on-change="handleCurrentPageChanged" ></Page>  
       </div>
@@ -73,6 +80,13 @@ export default {
         issues: [],
       }
     },
+    // watch: {
+    //   '$route' (to, from) {
+    //     // 对路由变化作出响应...
+    //     this.keyword = this.$route.params.keyword
+    //     this.searchIssues()
+    //   }
+    // },
 
     components: {
     },
@@ -103,6 +117,14 @@ export default {
       this.$nextTick(function () {
         this.getIssues()
       })
+    },
+    created(){
+      // console.log(this.$route.params.keyword)
+      if (this.$route.params.keyword) {
+        this.keyword = this.$route.params.keyword
+      } else {
+          this.keyword = " "
+      }
     }
 }
 </script>
@@ -168,5 +190,15 @@ export default {
 .search{
   margin-bottom: 40px;
 }
+
+.slogan{
+  font-size: 16px;
+  text-align: center;
+}
+
+.logo1{
+  height: 300px;
+}
+
 
 </style>

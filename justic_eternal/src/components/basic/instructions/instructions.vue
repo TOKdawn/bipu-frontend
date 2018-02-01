@@ -33,6 +33,7 @@
   width: 960px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 100px;
   /*background-color: #666;*/
   }
 </style>

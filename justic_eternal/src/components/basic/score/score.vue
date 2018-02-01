@@ -1,21 +1,7 @@
 <template>
-  <div v-if="issue" class="container">
-    
-<!--     <Card class="title-container">
-      {{issue.title.trim()}}
-    </Card> -->
-
-    <div class="comment-container">
-      <Card>
-        <comment :comment="issue"/>
-      </Card>
-      <Card class="comment-list">
-        <comment v-for="comment in comments" :key="comment.id" :comment="comment"/>
-      </Card>
-    </div>
-
+  <div v-if="issue" class="container1">
     <Affix :offset-top="100" class ="favorite">
-    <Button type="ghost" @click="modal = true" shape="circle" >收藏</Button>
+      <Button type="ghost" @click="modal = true" shape="circle" >收藏</Button>
       <Modal
           v-model="modal"
           title="添加到"
@@ -55,6 +41,21 @@
           </Scroll>
       </Modal>
     </Affix>
+    
+    <div class="title-container">
+      {{issue.title.trim()}}
+    </div>
+
+    <div class="comment-container">
+      <Card>
+        <comment :comment="issue"/>
+      </Card>
+      <Card class="comment-list">
+        <comment v-for="comment in comments" :key="comment.id" :comment="comment"/>
+      </Card>
+    </div>
+
+
 
   </div>
 </template>
@@ -129,7 +130,7 @@ export default {
 
 <style scoped>
 
-.container{
+.container1{
   width: 960px;
   margin-left: auto;
   margin-right: auto;
@@ -138,8 +139,10 @@ export default {
 }
 
 .title-container{
-
+  margin-bottom: 40px;
+  margin-top: -30px;
   font-size: 36px;
+  text-align: center;
 
 }
 
@@ -152,7 +155,10 @@ export default {
 }
 
 .favorite{
-  margin-left: 40px;
+  float: right;
+  margin-top: 100px;
+  margin-right: 20px;
+  z-index: 3;
 }
 
 </style>

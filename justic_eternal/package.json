@@ -21,7 +21,9 @@
         "vuex": "^3.0.0",
         "github-markdown-css": "^2.8.0",
         "highlight.js": "^9.12.0",
-        "marked": "^0.3.6"
+        "marked": "^0.3.6",
+        "aplayer": "^1.6.0",
+        "dplayer": "^1.21.2"
     },
     "devDependencies": {
         "autoprefixer": "^7.1.2",

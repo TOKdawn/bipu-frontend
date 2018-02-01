@@ -20,7 +20,7 @@
   .comment-title {
     height: 48px;
     line-height: 48px;
-    background-color: #f9fafc;
+
     border-bottom: solid 1px #fff;
     padding: 0px 30px;
     div {
