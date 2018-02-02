@@ -34,19 +34,26 @@
       <div class="nav-right">
         <div class="user">
           <Avatar icon="person" class="avatar" src="//avatars2.githubusercontent.com/u/15122564?s=460&v=4"/>
-          <Icon type="more"  size="20" class="more"></Icon>
+          <Icon type="more"  size="30" class="more"></Icon>
         </div>
       </div>
 
     </div>
-          <Input class="search" size="large"  placeholder="说你又想要什么奇怪的谱子 - -！"  >
-              <Button slot="append" icon="ios-search" size="nomal"></Button>
+      <div v-if="($route.name !=='home' )" >
+          <Input  class="search" v-model="keyword1" @on-enter="$_router1(keyword1)" placeholder="说你又想要什么奇怪的谱子 - -！" >
+              <Button slot="append" icon="ios-search" @click="$_router1(keyword1)" ></Button> 
           </Input>
+      </div>
   </div>
 </template>
 
 <script>
 export default {
+    data () {
+      return {
+        keyword1: '',
+      }
+    },
     computed: {
 
     },
@@ -55,7 +62,7 @@ export default {
       $_router: function(routerGo) {
         switch (routerGo) {
           case 1:
-           this.$router.push("/basic/home");
+            this.$router.push("/basic/home");
             break;
           case 2:
             this.$router.push("/basic/translator");
@@ -73,7 +80,11 @@ export default {
             this.$router.push("/basic/instructions");
             break;
         }
-    }
+      },
+      $_router1: function(key) {
+        // this.$router.replace({ home: 'home', params: { keyword: "key" }});
+        this.$router.push({ path: `/basic/home/${key}`});
+      }
   }  
 
 };
@@ -92,7 +103,7 @@ export default {
 
 
 .header1 {
-  height: 40px;
+  height: 60px;
   background-color: hsla(0,0%,95%,.8); 
 }
 
@@ -136,14 +147,14 @@ export default {
 
 .more{
   float: right;
-  margin-left: 10px;
+  margin-left: 20px;
   position: relative;
   top: 50%;
-  transform: translateY(-70%);  
+  transform: translateY(-60%);  
 }
 
 .avatar{
-   
+
 }
 
 .search{

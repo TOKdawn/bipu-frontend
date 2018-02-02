@@ -5,7 +5,10 @@
         <!-- <v-header></v-header> -->
         <v-banner></v-banner>
         <Content class="main">
-               <router-view></router-view>
+          <transition name="fade">
+            <router-view></router-view>
+          </transition>
+               
         </Content>
 
         <Footer class="footer">
