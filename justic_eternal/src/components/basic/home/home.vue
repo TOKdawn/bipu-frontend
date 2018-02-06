@@ -153,6 +153,7 @@ export default {
   padding-left: 30px; 
   line-height: 50px; 
   font-size: 24px;
+  cursor:pointer;
 }
 
 .list-font{
