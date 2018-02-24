@@ -7,6 +7,7 @@
           <Button slot="append" icon="ios-search" @click="searchIssues()" ></Button>
       </Input>
 
+
       <div class="list-name" v-if="totalNum">
         <span>谱曲名称</span>      
         <span class="list-name-r">上传者</span>
@@ -164,10 +165,12 @@ export default {
 
 
 .list-name{
-  font-size: 18px;
+  font-size: 20px;
   color: #495060;
   margin-left: 45px;
   margin-bottom: 20px;
+      color: hsl(210, 13%, 30%);
+        text-shadow: 0 1px 1px rgba(184, 213, 232, 0.8);
 }
 
 .list-name-r{

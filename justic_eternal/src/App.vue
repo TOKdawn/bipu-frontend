@@ -9,5 +9,8 @@
   }
 </script>
 <style>
-
+#father {
+  overflow: hidden;
+  min-width: 960px;
+}
 </style>

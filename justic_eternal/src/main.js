@@ -12,8 +12,10 @@ import 'highlight.js/styles/github.css'
 import 'github-markdown-css/github-markdown.css'
 import '../my-theme/index.less'
 import 'iview/dist/styles/iview.css'
-import {gitHubApi} from './utils'
+import { gitHubApi } from './utils'
 import store from './vuex/'
+import Transcore from 'je-transcore'
+
 Vue.config.productionTip = false
     // axios.defaults.baseURL = 'http://rap2api.taobao.org/app/mock/1162/'
 Vue.prototype.$http = axios
@@ -22,20 +24,20 @@ Vue.prototype.$highlight = highlight
 Vue.use(Vuex)
 Vue.use(VueRouter)
 Vue.use(iView)
-
+    // Vue.use(Transcore)
 
 marked.setOptions({
-  renderer: new marked.Renderer(),
-  gfm: true,
-  tables: true,
-  breaks: false,
-  pedantic: false,
-  sanitize: false,
-  smartLists: true,
-  smartypants: false,
-  highlight: function (code) {
-    return Vue.prototype.$highlight.highlightAuto(code).value
-  }
+    renderer: new marked.Renderer(),
+    gfm: true,
+    tables: true,
+    breaks: false,
+    pedantic: false,
+    sanitize: false,
+    smartLists: true,
+    smartypants: false,
+    highlight: function(code) {
+        return Vue.prototype.$highlight.highlightAuto(code).value
+    }
 })
 Vue.prototype.$marked = marked
 

@@ -143,7 +143,10 @@ export default {
   margin-top: -30px;
   font-size: 36px;
   text-align: center;
-
+    /* background: hsl(210, 13%, 60%); */
+        color: hsl(210, 13%, 30%);
+        text-shadow: 0 1px 1px #e0ae62;
+    
 }
 
 .comment-container{
