@@ -1,6 +1,6 @@
 <template>
    <div>
-    <h1>当前谱册页ID为:{{volumeId}}</h1>
+    <h1>暂未完工，敬请期待！</h1>
    </div>
 </template>
 

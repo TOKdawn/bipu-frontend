@@ -13,7 +13,7 @@
 
         <Footer class="footer">
         <h1 class="footertitle">哔谱哔谱</h1>
-        <h2 class="footerinfo1">Copyright © 2018 哔谱哔谱 bipubipu.com | ICP备XXX号</h2>
+        <h2 class="footerinfo1">Copyright © 2018 哔谱哔谱 bipubipu.com | 黔ICP备17010756号</h2>
         <h2 class="footerinfo2"> 2018 Made with <Icon type="heart"></Icon> by Justice_Eternal</h2>
         <a class="share1" href="https://github.com/zytx121/je" target="_blank">
           <Icon type="social-github" color="white" size="24"></Icon>
