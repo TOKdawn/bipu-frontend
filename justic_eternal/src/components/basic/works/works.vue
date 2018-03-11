@@ -1,43 +1,143 @@
 <template>
     <div class="container1">
-	   	<div class="music">
-	   		<h1 class="music-title">音乐专区</h1>
-	        <div id="player5" class="aplayer" ref="ap5"></div>
-	        <div class="author"><a href="http://http://5sing.kugou.com/34713615/default.html">♡ 流萤川小时 ♡</a></div>
-	        <div id="player1" class="aplayer" ref="ap1"></div>
-	        <div class="author"><a href="http://5sing.kugou.com/3811857/fc/5.html">♡ 自由姐 ♡</a></div>    
-	        <div id="player2" class="aplayer" ref="ap2"></div>
-	        <div class="author"><a href="http://5sing.kugou.com/nyarin/lastupdate.html">♡ 猫燐kirin03 ♡</a></div>
-	        <div id="player3" class="aplayer" ref="ap3"></div>
-	        <div class="author"><a href="http://5sing.kugou.com/10590245/default.html###">♡ 月光银百合 ♡</a></div>
-	        <div id="player4" class="aplayer" ref="ap4"></div>
-	        <div class="author"><a href="http://music.163.com/#/artist?id=1077060">♡ 翎渡 ♡</a></div>
-	    </div>
 
-	   	<div class="tutorial">
-	   		<h1 class="tutorial-title">教学专区</h1>
+        <Card class="container2">
+        <div class="newyear">
+            <h1 class="newyear-title">豪斯口琴电台</h1>
+            <p class="newyear-subtitle">纯演奏区UP主【豪斯·比格朗费斯】最新杂谈节目强势入驻哔谱哔谱，火爆连载中！粉丝过千，播放过万不是梦！</p>
+            <div class="gridlist-container">
+                <a href="https://www.bilibili.com/video/av20564831/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="http://upload-images.jianshu.io/upload_images/2141706-1fb3a1db22876494.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">第1期</span>
+                       <span slot="extra"> <b>教练，吹口琴的人都是基佬吗？聊一聊口琴玩家的那些梗~</b></span>
+                    </Card>
+                </a>
+                <a href="https://www.bilibili.com/video/av13002958/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="http://upload-images.jianshu.io/upload_images/2141706-9f0f1e28de681487.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">第0期</span>
+                       <span slot="extra"> <b>教练我要学口琴！教练：坐下听我讲故事</b></span>
+                    </Card>
+                </a>
 
+            </div>
+
+        </div>
+        </Card>
+        <Card class="container2">
+        <div class="newyear">
+            <h1 class="newyear-title">ACG口琴小苑专区</h1>
+            <p class="newyear-subtitle">在这里，你可以聊医学、人生、爱情、ACG……甚至还有【口琴】！欢迎您的加入 QQ：374437595</p>
+            <div class="gridlist-container">
+                <a href="https://www.bilibili.com/video/av17636724/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="http://upload-images.jianshu.io/upload_images/2141706-15d75a694584a328.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">2017年圣诞祭</span>
+                       <span slot="extra"> <b>年度巨制！B站史上最大口琴演奏策划</b></span>
+                    </Card>
+                </a>
+                <a href="https://www.bilibili.com/video/av13002958/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="http://upload-images.jianshu.io/upload_images/2141706-369936a3fb51e476.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">2017年夏日祭</span>
+                       <span slot="extra"> <b>以琴为契，于茫茫人海中遇见你</b></span>
+                    </Card>
+                </a>
+
+            </div>
+
+        </div>
+        </Card>
+
+        <Card class="container2">
+	   	<div class="newyear">
+	   		<h1 class="newyear-title">排骨の不科学の口琴教室</h1>
+            <p class="newyear-subtitle">排骨的口琴小站，欢迎一起学习交流</p>
 	        <div class="gridlist-container">
-	            <Card class="gridlist" v-for="item in recommondList1" key="item.aid">
-	              <img :src="item.pic" @click="playDetail1(item.id)" class="tutorial-img" />
-	              <span slot="title" class="gridlist-title" @click="playDetail1(item.id)">{{item.title}}</span>
-	              <span slot="extra">by <b>{{item.author}}</b></span>
-	            </Card>
+                <a href="https://www.bilibili.com/video/av15886047/" target="_blank">
+    	            <Card class="gridlist" >
+        	           <img src="http://upload-images.jianshu.io/upload_images/2141706-864e45115c886b37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+        	           <span slot="title" class="gridlist-title">EP1（花舌）</span>
+        	           <span slot="extra">by <b>吃猪的排骨</b></span>
+    	            </Card>
+                </a>
+                <a href="https://www.bilibili.com/video/av15886250/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="http://upload-images.jianshu.io/upload_images/2141706-864e45115c886b37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">EP2（推键，移琴）</span>
+                       <span slot="extra">by <b>吃猪的排骨</b></span>
+                    </Card>
+                </a>
+                <a href="https://www.bilibili.com/video/av15886606/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="http://upload-images.jianshu.io/upload_images/2141706-864e45115c886b37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">EP3（断奏）</span>
+                       <span slot="extra">by <b>吃猪的排骨</b></span>
+                    </Card>
+                </a>
+                <a href="https://www.bilibili.com/video/av15886613/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="http://upload-images.jianshu.io/upload_images/2141706-693930646f308805.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">EP4（震音，颤音）</span>
+                       <span slot="extra">by <b>吃猪的排骨</b></span>
+                    </Card>
+                </a>
+                <a href="https://www.bilibili.com/video/av15886673/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="http://upload-images.jianshu.io/upload_images/2141706-de120b8f12fdec7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">EP4 part2（震音，颤音）</span>
+                       <span slot="extra">by <b>吃猪的排骨</b></span>
+                    </Card>
+                </a>
+                <a href="https://www.bilibili.com/video/av15887697/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="http://upload-images.jianshu.io/upload_images/2141706-abfad72355b9cd53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">EP5（快速演奏技巧入门）</span>
+                       <span slot="extra">by <b>吃猪的排骨</b></span>
+                    </Card>
+                </a>
+                <a href="https://www.bilibili.com/video/av15887671/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="http://upload-images.jianshu.io/upload_images/2141706-b9b5c98e412b388c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">EP6（八度和音）</span>
+                       <span slot="extra">by <b>吃猪的排骨</b></span>
+                    </Card>
+                </a>
+                <a href="https://www.bilibili.com/video/av17665719/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="http://upload-images.jianshu.io/upload_images/2141706-044d090be6326c79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">EP7（模仿拨弦乐器 舌震音）</span>
+                       <span slot="extra">by <b>吃猪的排骨</b></span>
+                    </Card>
+                </a>
+
+<!--                 <Card class="gridlist" v-for="item in recommondList1" key="item.aid">
+                  <img :src="item.pic" @click="playDetail1(item.id)" class="tutorial-img" />
+                  <span slot="title" class="gridlist-title" @click="playDetail1(item.id)">{{item.title}}</span>
+                  <span slot="extra">by <b>{{item.author}}</b></span>
+                </Card> -->
 	        </div>
 		</div>
-
-	   	<div class="newyear">
-	   		<h1 class="newyear-title">JE吧拜年祭</h1>
-	   		<img class="newyear-img" src="@/assets/bnj.jpg" >
-
-<!-- 	        <div class="gridlist-container">
-	            <Card class="gridlist" v-for="item in recommondList1" key="item.aid">
-	              <img :src="item.pic" @click="playDetail1(item.id)" class="tutorial-img" />
-	              <span slot="title" class="gridlist-title" @click="playDetail1(item.id)">{{item.title}}</span>
-	              <span slot="extra">by <b>{{item.author}}</b></span>
-	            </Card>
-	        </div> -->
-		</div>
+        </Card>
+        <Card class="container2">
+        <div class="newyear">
+            <h1 class="newyear-title">音乐专区</h1>
+            <div id="player5" class="aplayer" ref="ap5"></div>
+            <div class="author"><a href="http://http://5sing.kugou.com/34713615/default.html">♡ 流萤川小时 ♡</a></div>
+            <div id="player1" class="aplayer" ref="ap1"></div>
+            <div class="author"><a href="http://5sing.kugou.com/3811857/fc/5.html">♡ 自由姐 ♡</a></div>    
+            <div id="player2" class="aplayer" ref="ap2"></div>
+            <div class="author"><a href="http://5sing.kugou.com/nyarin/lastupdate.html">♡ 猫燐kirin03 ♡</a></div>
+            <div id="player3" class="aplayer" ref="ap3"></div>
+            <div class="author"><a href="http://5sing.kugou.com/10590245/default.html###">♡ 月光银百合 ♡</a></div>
+            <div id="player4" class="aplayer" ref="ap4"></div>
+            <div class="author"><a href="http://music.163.com/#/artist?id=1077060">♡ 翎渡 ♡</a></div>
+        </div>
+        </Card>
+<!-- 	   	<div class="newyear">
+	   		<h1 class="newyear-title">A苑の圣诞祭&夏日祭</h1>
+		</div> -->
 
     </div>
 </template>
@@ -283,7 +383,9 @@ export default {
   margin-left: auto;
   margin-right: auto;
 }
-
+.container2{
+    margin-bottom: 40px;
+}
 .author{
 	text-align: center;
 	font-size: 18px;
@@ -303,7 +405,7 @@ export default {
 .gridlist{
 	display: inline-block;
 
-	width: 460px;
+	width: 440px;
 	height: 300px;
 	margin: 10px 10px;
 
@@ -320,16 +422,24 @@ export default {
 .gridlist-title{
 	font-size: 18px;
 	font-weight: bold;
+
 }
 
 .newyear{
-	margin: 80px 0;
+	margin: 20px 0;
+
 
 }
 
 .newyear-title{
+	margin: 20px 0px;
 	text-align: center;
-	color: red;
+}
+
+.newyear-subtitle{
+    margin: 20px 0px;
+    text-align: center;
+    color: #bbb;
 }
 
 .newyear-img{
