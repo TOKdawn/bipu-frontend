@@ -46,7 +46,9 @@
 
         </TabPane>
         <TabPane label="曲谱转换" name="turn">
+
           <Row>
+          <br/>
         <Col span="10" offset="1">            
         <Input v-model="value5" type="textarea" :rows="18" placeholder="Enter something..."></Input>
         </Col>

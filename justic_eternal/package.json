@@ -25,7 +25,6 @@
         "aplayer": "^1.6.0",
         "dplayer": "^1.21.2",
         "je-transcore": "^0.3.0"
-
     },
     "devDependencies": {
         "autoprefixer": "^7.1.2",

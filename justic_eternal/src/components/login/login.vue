@@ -93,11 +93,11 @@ export default {
 <style scoped>
 
 .header {
-  height: 430px;
-  background-image: url(../../assets/banner-3.png);
+  height: 378px;
+  background-image: url(../../assets/banner-9.png);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size:2200px 430px;
+  background-size: 1920px 378px;
   z-index: 1;
 }
 
