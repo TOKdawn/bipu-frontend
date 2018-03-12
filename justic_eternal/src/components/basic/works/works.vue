@@ -13,7 +13,7 @@
                        <span slot="extra"> <b>教练，吹口琴的人都是基佬吗？聊一聊口琴玩家的那些梗~</b></span>
                     </Card>
                 </a>
-                <a href="https://www.bilibili.com/video/av13002958/" target="_blank">
+                <a href="https://www.bilibili.com/video/av20417696/" target="_blank">
                     <Card class="gridlist" >
                        <img src="http://upload-images.jianshu.io/upload_images/2141706-9f0f1e28de681487.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
                        <span slot="title" class="gridlist-title">第0期</span>
