@@ -6,6 +6,13 @@
             <h1 class="newyear-title">豪斯口琴电台</h1>
             <p class="newyear-subtitle">纯演奏区UP主【豪斯·比格朗费斯】最新杂谈节目强势入驻哔谱哔谱，火爆连载中！粉丝过千，播放过万不是梦！</p>
             <div class="gridlist-container">
+                <a href="https://www.bilibili.com/video/av21706043/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="https://upload-images.jianshu.io/upload_images/2141706-3202711e264f169d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">第2期</span>
+                       <span slot="extra"> <b>教练你为啥要学口琴？聊聊自己的口琴入门历程 ~</b></span>
+                    </Card>
+                </a>
                 <a href="https://www.bilibili.com/video/av20564831/" target="_blank">
                     <Card class="gridlist" >
                        <img src="http://upload-images.jianshu.io/upload_images/2141706-1fb3a1db22876494.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />

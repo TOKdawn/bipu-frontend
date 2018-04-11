@@ -3,9 +3,24 @@
     
     <div class="list-container">
 
+    <div v-if="switch1">
+      <Input class="search" v-model="keyword" placeholder="说你又想要什么奇怪的谱子 - -！" @on-enter="searchIssues1()" >
+          <Button slot="append" icon="ios-search" @click="searchIssues1()" ></Button>
+      </Input>
+    </div>
+
+    <div v-else>
       <Input class="search" v-model="keyword" placeholder="说你又想要什么奇怪的谱子 - -！" @on-enter="searchIssues()" >
           <Button slot="append" icon="ios-search" @click="searchIssues()" ></Button>
-      </Input>
+      </Input>      
+    </div>
+
+      <div class="search">
+         <i-switch class="select" v-model="switch1" @on-change="change"></i-switch>
+         <h2 > 只搜索标题</h2>
+      </div>
+      
+
 
 
       <div class="list-name" v-if="totalNum">
@@ -79,6 +94,7 @@ export default {
         currentPage: 1,
         pageSize: 30,
         issues: [],
+        switch1: false
       }
     },
     // watch: {
@@ -97,6 +113,10 @@ export default {
         this.currentPage = 1
         this.getIssues()
       },
+      searchIssues1 () {
+        this.currentPage = 1
+        this.getIssues1()
+      },
       handleCurrentPageChanged (val) {
         this.currentPage = val
         this.getIssues()
@@ -112,6 +132,20 @@ export default {
           this.issues = response.data.items
           this.$Loading.finish()
         })
+      },
+      getIssues1 () {
+        this.$gitHubApi.getIssues1(this, {
+          keyword: this.keyword,
+          currentPage: this.currentPage,
+          
+        }).then(response => {
+          this.totalNum = response.data.total_count
+          this.issues = response.data.items
+          this.$Loading.finish()
+        })
+      },
+      change (status) {
+          this.$Message.info('世界线变动率：' + status*1.048596);
       }
     },
     mounted: function () {
@@ -193,6 +227,9 @@ export default {
 
 .search{
   margin-bottom: 40px;
+  color: #888;
+  font-size: 11px;
+
 }
 
 .slogan{
@@ -204,5 +241,10 @@ export default {
   height: 300px;
 }
 
+.select{
+  float: left;
+  display: inline;
+  margin-right: 8px;
+}
 
 </style>
