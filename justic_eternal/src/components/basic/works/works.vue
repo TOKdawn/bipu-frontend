@@ -6,6 +6,13 @@
             <h1 class="newyear-title">豪斯口琴电台</h1>
             <p class="newyear-subtitle">纯演奏区UP主【豪斯·比格朗费斯】最新杂谈节目强势入驻哔谱哔谱，火爆连载中！粉丝过千，播放过万不是梦！</p>
             <div class="gridlist-container">
+                <a href="https://www.bilibili.com/video/av21706043/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="https://upload-images.jianshu.io/upload_images/2141706-3202711e264f169d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">第2期</span>
+                       <span slot="extra"> <b>教练你为啥要学口琴？聊聊自己的口琴入门历程 ~</b></span>
+                    </Card>
+                </a>
                 <a href="https://www.bilibili.com/video/av20564831/" target="_blank">
                     <Card class="gridlist" >
                        <img src="http://upload-images.jianshu.io/upload_images/2141706-1fb3a1db22876494.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
@@ -25,6 +32,36 @@
 
         </div>
         </Card>
+
+
+
+        <Card class="container2">
+        <div class="newyear">
+            <h1 class="newyear-title">JE吧专区</h1>
+            <p class="newyear-subtitle">Justice_Eternal吧一年一次，一次鸽一年的面基活动！</p>
+            <div class="gridlist-container">
+                <a href="https://www.bilibili.com/video/av22119348/" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="https://upload-images.jianshu.io/upload_images/2141706-8216d6d4a7be6b15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">JE吧西安合奏</span>
+                       <span slot="extra"> <b>君色に染まる(染上你的颜色MV)</b></span>
+                    </Card>
+                </a>
+                <a href="https://tieba.baidu.com/p/5649612875" target="_blank">
+                    <Card class="gridlist" >
+                       <img src="https://upload-images.jianshu.io/upload_images/2141706-6cadbdf4a3745adc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="tutorial-img" />
+                       <span slot="title" class="gridlist-title">JE吧青岛合奏</span>
+                       <span slot="extra"> <b>火热报名中！！！</b></span>
+                    </Card>
+                </a>
+
+            </div>
+
+        </div>
+        </Card>
+
+
+
         <Card class="container2">
         <div class="newyear">
             <h1 class="newyear-title">ACG口琴小苑专区</h1>
@@ -49,6 +86,8 @@
 
         </div>
         </Card>
+
+
 
         <Card class="container2">
 	   	<div class="newyear">
