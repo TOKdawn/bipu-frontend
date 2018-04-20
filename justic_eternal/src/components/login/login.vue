@@ -28,6 +28,10 @@
                 <Icon type="information"></Icon>
                 使用说明
             </MenuItem>
+            <MenuItem name="7" @click.native="GoGithub">
+                <Icon type="ios-game-controller-b"></Icon>
+                登录
+            </MenuItem>
           </Menu>
       </div>
 
@@ -84,6 +88,12 @@ export default {
       $_router1: function(key) {
         // this.$router.replace({ home: 'home', params: { keyword: "key" }});
         this.$router.push({ path: `/basic/home/${key}`});
+      },
+      GoGithub () {
+        this.$gitHubApi.goGithub(this).then(res => {
+          console.log(res)
+          window.location.href = res.message
+        })
       }
   }  
 
