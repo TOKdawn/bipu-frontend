@@ -248,7 +248,7 @@ export default {
 
     },
     changedown: function() {
-      console.log('dawn')
+      // console.log('dawn')
       this.value4 = Transcore.tune(this.value3,{offset:-1,preferSharpE:this.flag[5], preferSharpB:this.flag[7]})
     },
     changeup: function() {

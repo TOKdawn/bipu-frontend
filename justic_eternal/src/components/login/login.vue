@@ -37,7 +37,7 @@
 
       <div class="nav-right">
         <div class="user">
-          <Avatar icon="person" class="avatar" src="//avatars2.githubusercontent.com/u/15122564?s=460&v=4"/>
+          <Avatar icon="person" class="avatar" src="./akari.jpg"/>
           <Icon type="more"  size="30" class="more"></Icon>
         </div>
       </div>
