@@ -17,7 +17,7 @@ import store from './vuex/'
 import Transcore from 'je-transcore'
 
 Vue.config.productionTip = false
-axios.defaults.baseURL = 'http://www.dawninshadow.com:7001'
+    // axios.defaults.baseURL = 'http://dawninshadow.com:7001'
 
 Vue.prototype.$http = axios
 Vue.prototype.$gitHubApi = gitHubApi
