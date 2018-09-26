@@ -17,7 +17,8 @@ import store from './vuex/'
 import Transcore from 'je-transcore'
 
 Vue.config.productionTip = false
-    // axios.defaults.baseURL = 'http://rap2api.taobao.org/app/mock/1162/'
+    // axios.defaults.baseURL = 'http://dawninshadow.com:7001'
+
 Vue.prototype.$http = axios
 Vue.prototype.$gitHubApi = gitHubApi
 Vue.prototype.$highlight = highlight

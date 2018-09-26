@@ -15,13 +15,12 @@
       </Input>      
     </div>
 
+
+
       <div class="search">
          <i-switch class="select" v-model="switch1" @on-change="change"></i-switch>
          <h2 > 只搜索标题</h2>
       </div>
-      
-
-
 
       <div class="list-name" v-if="totalNum">
         <span>谱曲名称</span>      
