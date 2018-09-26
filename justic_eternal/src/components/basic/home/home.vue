@@ -16,6 +16,7 @@
     </div>
 
 
+
       <div class="search">
          <i-switch class="select" v-model="switch1" @on-change="change"></i-switch>
          <h2 > 只搜索标题</h2>
@@ -227,6 +228,7 @@ export default {
   margin-bottom: 40px;
   color: #888;
   font-size: 11px;
+
 }
 
 .slogan{

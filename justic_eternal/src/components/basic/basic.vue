@@ -14,6 +14,9 @@
         <Footer class="footer">
         <h1 class="footertitle">哔谱哔谱</h1>
         <h2 class="footerinfo1">Copyright © 2018 哔谱哔谱 bipubipu.com | 黔ICP备17010756号</h2>
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52011102002222" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://www.beian.gov.cn/img/ghs.png" style="float:left;"/><p style="float:left;color:white;font-size: 11px;"> 贵公网安备 52011102002222号</p></a>
+        
+     
         <h2 class="footerinfo2"> 2018 Made with <Icon type="heart"></Icon> by Justice_Eternal</h2>
         <a class="share1" href="https://github.com/zytx121/je" target="_blank">
           <Icon type="social-github" color="white" size="24"></Icon>
@@ -62,7 +65,7 @@ export default {
 
 .footer {
   text-align: center;
-  height: 100px;
+  height: 120px;
   background-color: #434343;
 }
 
