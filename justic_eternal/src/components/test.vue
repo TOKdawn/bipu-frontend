@@ -1,5 +1,4 @@
 <template>
-import func from './vue-temp/vue-editor-bridge';
 
  <Row>
     <Col span="12">    

@@ -14,9 +14,6 @@
           <Button slot="append" icon="ios-search" @click="searchIssues()" ></Button>
       </Input>      
     </div>
-
-
-
       <div class="search">
          <i-switch class="select" v-model="switch1" @on-change="change"></i-switch>
          <h2 > 只搜索标题</h2>
@@ -26,18 +23,12 @@
         <span>谱曲名称</span>      
         <span class="list-name-r">上传者</span>
       </div>
-
-
-
       <Card class="score-list" v-for="issue in issues" :key="issue.id" v-if="totalNum">
         <router-link :to="{name:'score', params: {scoreId: issue.number, issue: issue}}">
           <h2 class="list-font">{{issue.title.trim().substring(0, 25)}}</h2>
         </router-link>
         <Avatar icon="person" class="list-avatar" size="large" :src="issue.user.avatar_url"  />
       </Card>
-
-
-
 <!--       <Card class="score-list">
         Fly Me to The Moon
         <Avatar icon="person" class="list-avatar" size="large" src="//avatars2.githubusercontent.com/u/15122564?s=460&v=4"/>

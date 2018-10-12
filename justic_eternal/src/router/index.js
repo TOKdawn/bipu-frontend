@@ -19,7 +19,7 @@ export default [{
                 name: 'score',
                 component: r => require.ensure([], () => r(require('../components/basic/score/score.vue')), 'score')
             }, {
-                path: '/basic/user/:userNamed',
+                path: '/basic/user/:userId',
                 name: 'user',
                 meta: {
                     requireAuth: true

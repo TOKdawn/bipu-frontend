@@ -37,8 +37,16 @@
 
       <div class="nav-right">
         <div class="user">
-          <Avatar icon="person" class="avatar" src="./akari.jpg"/>
-          <Icon type="more"  size="30" class="more"></Icon>
+          <Avatar icon="person" class="avatar" :src=akari  @click.native="$_router(7)"/>
+              <Dropdown class="more" v-if="flag" >
+                <a href="javascript:void(0)" >
+                    <Icon type="more"  size="30"></Icon>
+                </a>
+                <DropdownMenu slot="list">
+                    <DropdownItem @click.native="$_router(8)">个人中心</DropdownItem>
+                    <DropdownItem @click.native="$_router(9)">注销</DropdownItem>
+                </DropdownMenu>
+            </Dropdown>
         </div>
       </div>
 
@@ -52,17 +60,20 @@
 </template>
 
 <script>
+import store from '@/vuex/index.js'
 export default {
     data () {
       return {
         keyword1: '',
+        akari: require('./akari.jpg'),
+        userid: '',
+        flag: 1,
       }
     },
     computed: {
 
     },
     methods: {
-
       $_router: function(routerGo) {
         switch (routerGo) {
           case 1:
@@ -83,6 +94,23 @@ export default {
           case 6:
             this.$router.push("/basic/instructions");
             break;
+          case 7:
+          if(this.flag){
+            if(store.state.userData.role !== 0){
+              this.$router.replace({ name: 'user', params: { userId:  this.userid}});
+            }
+          }else{
+            store.commit('userlog')
+            window.location.href='/passport/github'
+          }
+            break;
+          case 8:
+            this.$router.push("/basic/instructions");
+            break;
+          case 9:
+            store.commit('logout')
+            this.$axios.post("/user/logout")
+            break;
         }
       },
       $_router1: function(key) {
@@ -95,6 +123,16 @@ export default {
           window.location.href = res.message
         })
       }
+  },
+  created () {
+    this.flag = store.state.login.flag 
+    if(store.state.login.flag){
+      if(store.state.userData.role !== 0){
+        this.akari = store.state.userData.img,
+        this.userid = store.state.userData.id
+      }
+    }
+
   }  
 
 };
@@ -161,10 +199,11 @@ export default {
   position: relative;
   top: 50%;
   transform: translateY(-60%);  
+  cursor: pointer;
 }
 
 .avatar{
-
+  cursor: pointer;
 }
 
 .search{

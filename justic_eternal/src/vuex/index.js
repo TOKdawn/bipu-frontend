@@ -4,13 +4,16 @@ Vue.use(Vuex)
     /* eslint-disable no-new */
 const state = {
     userData: {
-        'id': '',
-        'role': 0,
+        'id': '123',
+        'role': 1,
         'name': '',
         'img': ''
     },
     video: {
         recommondList1: []
+    },
+    login: {
+        flag: 1
     }
 }
 const mutations = {
@@ -21,7 +24,11 @@ const mutations = {
         state.userData.img = userData.img
     },
     logout(state) {
+        state.login.flag = 0
         state.userData.role = 0
+    },
+    userlog(state) { //用户触发登录操作
+        state.login.flag = 1
     }
 }
 export default new Vuex.Store({

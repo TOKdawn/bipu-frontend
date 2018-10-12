@@ -10,21 +10,22 @@
         "build": "node build/build.js"
     },
     "dependencies": {
+        "aplayer": "^1.6.0",
         "axios": "^0.17.0",
-        "vue": "^2.5.2",
-        "vue-router": "^3.0.1",
         "css-loader": "^0.28.7",
+        "dplayer": "^1.21.2",
+        "github-markdown-css": "^2.8.0",
+        "highlight.js": "^9.12.0",
         "iview": "^2.6.0",
+        "je-transcore": "^0.3.0",
+        "marked": "^0.3.6",
         "node-sass": "^4.0.0",
         "sass-loader": "^6.0.6",
         "style-loader": "0.19.0",
-        "vuex": "^3.0.0",
-        "github-markdown-css": "^2.8.0",
-        "highlight.js": "^9.12.0",
-        "marked": "^0.3.6",
-        "aplayer": "^1.6.0",
-        "dplayer": "^1.21.2",
-        "je-transcore": "^0.3.0"
+        "vue": "^2.5.2",
+        "vue-cli": "^2.9.6",
+        "vue-router": "^3.0.1",
+        "vuex": "^3.0.0"
     },
     "devDependencies": {
         "autoprefixer": "^7.1.2",
@@ -39,10 +40,12 @@
         "chalk": "^2.0.1",
         "copy-webpack-plugin": "^4.0.1",
         "css-loader": "^0.28.0",
+        "eslint": "^5.6.0",
         "extract-text-webpack-plugin": "^3.0.0",
         "file-loader": "^1.1.4",
         "friendly-errors-webpack-plugin": "^1.6.1",
         "html-webpack-plugin": "^2.30.1",
+        "je-transcore": "^0.3.0",
         "less": "^2.7.3",
         "less-loader": "^4.0.5",
         "node-notifier": "^5.1.2",
@@ -63,8 +66,7 @@
         "webpack": "^3.6.0",
         "webpack-bundle-analyzer": "^2.9.0",
         "webpack-dev-server": "^2.9.1",
-        "webpack-merge": "^4.1.0",
-        "je-transcore": "^0.3.0"
+        "webpack-merge": "^4.1.0"
     },
     "engines": {
         "node": ">= 6.0.0",
