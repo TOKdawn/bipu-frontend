@@ -5,7 +5,7 @@
          <form method="POST" action="/upload" enctype="multipart/form-data">
         <input name="file" type="file" />
         <button type="submit">Upload</button>
-            </form>
+        </form>
         <Button type="info" @click="login">登录</Button>
         <Button type="success" @click="myinfo">获取我的信息</Button>
          <Button type="success" @click="logout">注销</Button>
@@ -38,7 +38,7 @@
    <br>
         <Button type="success" @click="showUserVloume">查看某用户谱册信息</Button>
          <br>
-        <Button type="warning"@click="showMyVloume">查看自己的谱册信息</Button>
+        <Button type="warning" @click="showMyVloume">查看自己的谱册信息</Button>
         <br>
         <Button type="error" @click="collectionVloume" >收藏一个谱册</Button>
 <br>

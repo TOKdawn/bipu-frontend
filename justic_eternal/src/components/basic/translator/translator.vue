@@ -4,104 +4,264 @@
     <div class="translator-title"> 转谱器</div>
     <Card class="translator">
       <Tabs value="directly">
-        <TabPane label="直接转谱" name="directly">
-  
+        <TabPane
+          label="直接转谱"
+          name="directly"
+        >
           <div class="button-bar1">
             转换前:
-            <Select v-model="ScaleSelet1" style="width:100px; margin-right: 30px;">
-                              <Option v-for="item in Scale1" :value="item.value" :key="item.value">{{ item.text }}</Option>
-                             </Select> 转换后:
-            <Select v-model="ScaleSelet2" style="width:100px ">
-                                <Option v-for="item in Scale2" :value="item.value" :key="item.value">
-                                    {{item.text}}
-                                    </Option>
-                             </Select>
-            <Button type="info" style="margin-left:30px" @click="change1">确定转换</Button>
+            <Select
+              v-model="ScaleSelet1"
+              style="width:100px; margin-right: 30px;"
+            >
+              <Option
+                v-for="item in Scale1"
+                :value="item.value"
+                :key="item.value"
+              >{{ item.text }}</Option>
+            </Select> 转换后:
+            <Select
+              v-model="ScaleSelet2"
+              style="width:100px "
+            >
+              <Option
+                v-for="item in Scale2"
+                :value="item.value"
+                :key="item.value"
+              >
+                {{item.text}}
+              </Option>
+            </Select>
+            <Button
+              type="info"
+              style="margin-left:30px"
+              @click="change1"
+            >确定转换</Button>
             <div class="preferSharpBar1">
-            <div>
-              <input class="tgl tgl-skewed" id="cb0" type="checkbox" :checked="flag[0]" />
-              <label class="tgl-btn" data-tg-off="#3" data-tg-on="#3" for="cb0" @click="preferSharp(0)"></label>
-  
-              <input class="tgl tgl-skewed" id="cb1" type="checkbox" :checked="flag[1]" />
-              <label class="tgl-btn" data-tg-off="4" data-tg-on="4" for="cb1" @click="preferSharp(1)"></label>
+              <div>
+                <input
+                  class="tgl tgl-skewed"
+                  id="cb0"
+                  type="checkbox"
+                  :checked="flag[0]"
+                />
+                <label
+                  class="tgl-btn"
+                  data-tg-off="#3"
+                  data-tg-on="#3"
+                  for="cb0"
+                  @click="preferSharp(0)"
+                ></label>
+                <input
+                  class="tgl tgl-skewed"
+                  id="cb1"
+                  type="checkbox"
+                  :checked="flag[1]"
+                />
+                <label
+                  class="tgl-btn"
+                  data-tg-off="4"
+                  data-tg-on="4"
+                  for="cb1"
+                  @click="preferSharp(1)"
+                ></label>
+              </div>
+              <div>
+                <input
+                  class="tgl tgl-skewed"
+                  id="cb2"
+                  type="checkbox"
+                  :checked="flag[2]"
+                />
+                <label
+                  class="tgl-btn"
+                  data-tg-off="#7"
+                  data-tg-on="#7"
+                  for="cb0"
+                  @click="preferSharp(2)"
+                ></label>
+                <input
+                  class="tgl tgl-skewed"
+                  id="cb3"
+                  type="checkbox"
+                  :checked="flag[3]"
+                />
+                <label
+                  class="tgl-btn"
+                  data-tg-off="[1]"
+                  data-tg-on="[1]"
+                  for="cb1"
+                  @click="preferSharp(3)"
+                ></label>
+              </div>
             </div>
-            <div>
-              <input class="tgl tgl-skewed" id="cb2" type="checkbox" :checked="flag[2]" />
-              <label class="tgl-btn" data-tg-off="#7" data-tg-on="#7" for="cb0" @click="preferSharp(2)"></label>
-  
-              <input class="tgl tgl-skewed" id="cb3" type="checkbox" :checked="flag[3]" />
-              <label class="tgl-btn" data-tg-off="[1]" data-tg-on="[1]" for="cb1" @click="preferSharp(3)"></label>
-            </div>
-  
-            </div>
-  
           </div>
           <Row>
-            <Col span="10" offset="1">
-            <Input v-model="value1" type="textarea" :rows="18" placeholder="转换器的谱子在此输入....."></Input>
+            <Col
+              span="10"
+              offset="1"
+            >
+            <Input v-model="value1" type="textarea" :rows="18" placeholder="转换器的谱子在此输入....."> </Input>
             </Col>
-            <Col span="10" offset="2">
-            <Input v-model="value2" type="textarea" :rows="18" placeholder="这里是转换结果....."></Input>
+            <Col
+              span="10"
+              offset="2"
+            >
+            <Input
+              v-model="value2"
+              type="textarea"
+              :rows="18"
+              placeholder="这里是转换结果....."
+            ></Input>
             </Col>
           </Row>
         </TabPane>
-        <TabPane label="逐步转谱" name="step">
-  
+        <TabPane
+          label="逐步转谱"
+          name="step"
+        >
+
           <div class="button-bar2">
-  
+
             <Button-group style="margin-left:197px;">
-              <Button type="primary" @click="changeup">
-                    <Icon type="chevron-left"></Icon>
-                    升一调
-                </Button>
-              <Button type="primary" @click="changedown">
-                    降一调
-                    <Icon type="chevron-right" ></Icon>
-                </Button>
+              <Button
+                type="primary"
+                @click="changeup"
+              >
+                <Icon type="chevron-left"></Icon>
+                升一调
+              </Button>
+              <Button
+                type="primary"
+                @click="changedown"
+              >
+                降一调
+                <Icon type="chevron-right"></Icon>
+              </Button>
             </Button-group>
             <div class="preferSharpBar">
               <div>
-                <input class="tgl tgl-skewed" id="cb4" type="checkbox" :checked="flag[4]" />
-                <label class="tgl-btn" data-tg-off="#3" data-tg-on="#3" for="cb4" @click="preferSharp(4)"></label>
-                <input class="tgl tgl-skewed" id="cb5" type="checkbox" :checked="flag[5]" />
-                <label class="tgl-btn" data-tg-off="4" data-tg-on="4" for="cb5" @click="preferSharp(5)"></label>
+                <input
+                  class="tgl tgl-skewed"
+                  id="cb4"
+                  type="checkbox"
+                  :checked="flag[4]"
+                />
+                <label
+                  class="tgl-btn"
+                  data-tg-off="#3"
+                  data-tg-on="#3"
+                  for="cb4"
+                  @click="preferSharp(4)"
+                ></label>
+                <input
+                  class="tgl tgl-skewed"
+                  id="cb5"
+                  type="checkbox"
+                  :checked="flag[5]"
+                />
+                <label
+                  class="tgl-btn"
+                  data-tg-off="4"
+                  data-tg-on="4"
+                  for="cb5"
+                  @click="preferSharp(5)"
+                ></label>
               </div>
               <div>
-                <input class="tgl tgl-skewed" id="cb6" type="checkbox" :checked="flag[6]" />
-                <label class="tgl-btn" data-tg-off="#7" data-tg-on="#7" for="cb6" @click="preferSharp(6)"></label>
-                <input class="tgl tgl-skewed" id="cb7" type="checkbox" :checked="flag[7]" />
-                <label class="tgl-btn" data-tg-off="[1]" data-tg-on="[1]" for="cb7" @click="preferSharp(7)"></label>
+                <input
+                  class="tgl tgl-skewed"
+                  id="cb6"
+                  type="checkbox"
+                  :checked="flag[6]"
+                />
+                <label
+                  class="tgl-btn"
+                  data-tg-off="#7"
+                  data-tg-on="#7"
+                  for="cb6"
+                  @click="preferSharp(6)"
+                ></label>
+                <input
+                  class="tgl tgl-skewed"
+                  id="cb7"
+                  type="checkbox"
+                  :checked="flag[7]"
+                />
+                <label
+                  class="tgl-btn"
+                  data-tg-off="[1]"
+                  data-tg-on="[1]"
+                  for="cb7"
+                  @click="preferSharp(7)"
+                ></label>
               </div>
             </div>
-  
-  
+
           </div>
-  
-  
+
           <Row>
-            <Col span="10" offset="1">
-            <Input v-model="value3" type="textarea" :rows="18" placeholder="转换器的谱子在此输入....."></Input>
+            <Col
+              span="10"
+              offset="1"
+            >
+            <Input
+              v-model="value3"
+              type="textarea"
+              :rows="18"
+              placeholder="转换器的谱子在此输入....."
+            ></Input>
             </Col>
-            <Col span="10" offset="2">
-            <Input v-model="value4" type="textarea" :rows="18" placeholder="这里是转换结果....."></Input>
+            <Col
+              span="10"
+              offset="2"
+            >
+            <Input
+              v-model="value4"
+              type="textarea"
+              :rows="18"
+              placeholder="这里是转换结果....."
+            ></Input>
             </Col>
           </Row>
-  
+
         </TabPane>
-        <TabPane label="曲谱转换" name="turn">
+        <TabPane
+          label="曲谱转换"
+          name="turn"
+        >
           <div class="button-bar3">
-            <Button type="info" style="margin-left:30px" @click="change2">确定转换</Button>
+            <Button
+              type="info"
+              style="margin-left:30px"
+              @click="change2"
+            >确定转换</Button>
           </div>
           <Row>
-            <br/>
-            <Col span="10" offset="1">
-            <Input v-model="value5" type="textarea" :rows="18" placeholder="BD谱在此输入......"></Input>
+            <br />
+            <Col
+              span="10"
+              offset="1"
+            >
+            <Input
+              v-model="value5"
+              type="textarea"
+              :rows="18"
+              placeholder="BD谱在此输入......"
+            ></Input>
             </Col>
-            <Col span="10" offset="2">
-            <Input v-model="value6" type="textarea" :rows="18" placeholder="数字谱在此输入......"></Input>
+            <Col
+              span="10"
+              offset="2"
+            >
+            <Input
+              v-model="value6"
+              type="textarea"
+              :rows="18"
+              placeholder="数字谱在此输入......"
+            ></Input>
             </Col>
           </Row>
-  
         </TabPane>
       </Tabs>
     </Card>
@@ -119,7 +279,6 @@ export default {
       value4: "",
       value5: "",
       value6: "",
-
       ScaleSelet1: "",
       ScaleSelet2: "",
       flag: [false, false, false, false, false, false, false, false], //存储异性同音参数
@@ -238,23 +397,32 @@ export default {
         : this.flag.splice(type + 1, 1, false);
     },
     change1: function() {
-       this.value2 = Transcore.tune(this.value1, { offset:this.ScaleSelet2-this.ScaleSelet1,  preferSharpE:this.flag[1], preferSharpB:this.flag[3]})
+      this.value2 = Transcore.tune(this.value1, {
+        offset: this.ScaleSelet2 - this.ScaleSelet1,
+        preferSharpE: this.flag[1],
+        preferSharpB: this.flag[3]
+      });
     },
     change2: function() {
-      this.value6 ==''
-        ? this.value6 = Transcore.toJE(this.value5)
-        : this.value5 = Transcore.toBD(this.value6);
-
-
+      this.value6 == ""
+        ? (this.value6 = Transcore.toJE(this.value5))
+        : (this.value5 = Transcore.toBD(this.value6));
     },
     changedown: function() {
       // console.log('dawn')
-      this.value4 = Transcore.tune(this.value3,{offset:-1,preferSharpE:this.flag[5], preferSharpB:this.flag[7]})
+      this.value4 = Transcore.tune(this.value3, {
+        offset: -1,
+        preferSharpE: this.flag[5],
+        preferSharpB: this.flag[7]
+      });
     },
     changeup: function() {
-       this.value4 = Transcore.tune(this.value3,{offset:1,preferSharpE:this.flag[5], preferSharpB:this.flag[7]})
+      this.value4 = Transcore.tune(this.value3, {
+        offset: 1,
+        preferSharpE: this.flag[5],
+        preferSharpB: this.flag[7]
+      });
     }
-    
   }
 };
 </script>
@@ -444,14 +612,16 @@ export default {
 .tgl-skewed:checked + .tgl-btn:active:after {
   left: 10%;
 }
-.preferSharpBar label ,.preferSharpBar1 label{
-float: left;
+.preferSharpBar label,
+.preferSharpBar1 label {
+  float: left;
 }
-.preferSharpBar div,.preferSharpBar1 div{
-  margin: 0px 10px;;
+.preferSharpBar div,
+.preferSharpBar1 div {
+  margin: 0px 10px;
   width: 130px;
   display: inline-block;
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 .preferSharpBar {
   display: inline-block;
@@ -459,8 +629,8 @@ float: left;
   margin-left: 100px;
   vertical-align: bottom;
 }
-.preferSharpBar1{
-    display: inline-block;
+.preferSharpBar1 {
+  display: inline-block;
   width: 350px;
   margin-left: 20px;
   vertical-align: bottom;

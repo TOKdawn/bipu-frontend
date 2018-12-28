@@ -12,10 +12,13 @@ import 'highlight.js/styles/github.css'
 import 'github-markdown-css/github-markdown.css'
 import '../my-theme/index.less'
 import 'iview/dist/styles/iview.css'
+import VueQuillEditor from 'vue-quill-editor'
 import { gitHubApi } from './utils'
 import store from './vuex/'
 import Transcore from 'je-transcore'
-
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 Vue.config.productionTip = false
     // axios.defaults.baseURL = 'http://dawninshadow.com:7001'
 
@@ -25,6 +28,7 @@ Vue.prototype.$highlight = highlight
 Vue.use(Vuex)
 Vue.use(VueRouter)
 Vue.use(iView)
+Vue.use(VueQuillEditor)
     // Vue.use(Transcore)
 
 marked.setOptions({
